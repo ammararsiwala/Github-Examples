@@ -1,0 +1,17 @@
+name: This is to learn the manual dispatch of workflows
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  manual_dispatch:
+   runs-on: ubuntu-latest
+   steps :
+     - name: Code Checkout
+       uses: actions/checkout@v4
+
+     - name: Run Python script
+       run : python hello.py
+   
+   
