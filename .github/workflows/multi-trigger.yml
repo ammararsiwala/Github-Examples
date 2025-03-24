@@ -1,11 +1,7 @@
 name: This is a workflow which has multiple triggers
 
 on:
-  push:
-    branches:
-      - main
-      - Multi-Trigger_Branch
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   job_name:
