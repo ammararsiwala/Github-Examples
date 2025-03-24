@@ -18,7 +18,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
          - name: Code Checkout
-           uses: acions/checkout@v4
+           uses: actions/checkout@v4
 
          - name: Print a variable message
            run: echo "Hello this message will be printed only if the repo name is correct"
