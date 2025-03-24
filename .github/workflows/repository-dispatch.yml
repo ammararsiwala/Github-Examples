@@ -1,9 +1,8 @@
-name: This is to learn how do use repository-dispatch
+name: This is to learn how to use repository-dispatch
 
 on:
- repository_dispatch:
-   types: [webhook]
-
+  repository_dispatch:
+    types: [webhook]
 
 jobs:
   running-repodispatch:
@@ -13,7 +12,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Printing the event name
-        run: echo "The github event is ${{GITHUB_EVENT_NAME}}"
+        run: echo "The GitHub event is ${{ github.event_name }}"
 
-    
-     
+      - name: Trigger repository dispatch
+        env:
+          MY_PAT: ${{ secrets.MY_PAT }}
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token $MY_PAT" \
+            https://api.github.com/repos/ammararsiwala/Github-Examples/dispatches \
+            -d '{"event_type":"webhook"}'
