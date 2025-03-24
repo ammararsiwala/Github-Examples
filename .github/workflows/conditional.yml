@@ -14,7 +14,7 @@ jobs:
             run: echo "Hello this message will be printed irrespective of the message"
 
   second_job:
-       if: github.repository == "Github-Examples"
+       if: github.repository == 'ammararsiwala/Github-Examples'
        runs-on: ubuntu-latest
        steps:
          - name: Code Checkout
