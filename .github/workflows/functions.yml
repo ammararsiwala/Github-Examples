@@ -8,6 +8,6 @@ jobs:
      runs-on: ubuntu-latest
      steps:
          - name: Check is string contains sub-strings
-           if: contains("Ammar",:mm")
+           if: contains("Ammar","mm")
            run: echo "Substring present"
            
