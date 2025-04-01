@@ -18,6 +18,6 @@ jobs:
            if: contains(env.l1,env.l2)
            run: echo "Substring present"
          - name: Substring Not Present
-           if: ${{ (!contains(env.l1,env.l2)) }}
+           if: ${{ !contains(env.l1,env.l2) }}
            run: echo "Not Present"
            
