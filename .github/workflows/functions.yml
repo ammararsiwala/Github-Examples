@@ -1,0 +1,12 @@
+name: This workflow is basically used to learn different types of functions
+
+on: 
+  push
+
+jobs:
+   function-checkers:
+     runs-on: ubuntu-latest
+     steps:
+         - name: Check is string contains sub-strings
+           if: contains("Ammar",:mm")
+           
