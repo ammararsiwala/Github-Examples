@@ -5,7 +5,7 @@ on:
 
 env:
   STR: "Ammar"
-  SUBSTRING: "mm"
+  SUBSTRING: "mmmmmmmmm"
 
 jobs:
    function-checkers:
