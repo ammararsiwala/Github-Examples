@@ -3,11 +3,18 @@ name: This workflow is basically used to learn different types of functions
 on: 
   push
 
+env:
+  STR: "Ammar"
+  SUBSTRING: "mm"
+
 jobs:
    function-checkers:
      runs-on: ubuntu-latest
      steps:
          - name: Check is string contains sub-strings
-           if: contains("Ammar","mm")
+           env:
+             l1 : ${{env.STR}}
+             l2 : ${{env.SUBSTRING}}
+           if: contains(env.l1,env.l2)
            run: echo "Substring present"
            
