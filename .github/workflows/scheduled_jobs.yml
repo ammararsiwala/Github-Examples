@@ -2,7 +2,7 @@ name: Practise workflow to learn about cron jobs
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*0 0 1 1 *"
 
 jobs:
   check_workflow:
