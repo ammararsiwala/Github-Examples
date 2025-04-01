@@ -17,4 +17,7 @@ jobs:
              l2 : ${{env.SUBSTRING}}
            if: contains(env.l1,env.l2)
            run: echo "Substring present"
+         - name: Substring Not Present
+           if: (!contains(env.l1,env.l2))
+           run: echo "Not Present"
            
